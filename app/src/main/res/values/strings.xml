@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">SmashStat</string>
+    <string name="app_name" translatable="false">Smash Stat</string>
+
+    <string name="welcome_text">Welcome to Smash Stat!</string>
 </resources>

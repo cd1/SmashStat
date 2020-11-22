@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fighter_dark_samus">Dunkle Samus</string>
+    <string name="fighter_jigglypuff">Pummeluff</string>
+    <string name="fighter_sheik">Shiek</string>
+    <string name="fighter_young_link">Junger Link</string>
+    <string name="fighter_mewtwo">Mewtu</string>
+    <string name="fighter_meta_knight">Meta-Knight</string>
+    <string name="fighter_dark_pit">Finsterer Pit</string>
+    <string name="fighter_pokemon_trainer">Pokémon-Trainer</string>
+    <string name="fighter_king_dedede">König Dedede</string>
+    <string name="fighter_wii_fit_trainer">Wii Fit-Trainerin</string>
+    <string name="fighter_rosalina_and_luma">Rosalina und Luma</string>
+    <string name="fighter_greninja">Quajutsu</string>
+    <string name="fighter_mii_brawler">Mii-Boxer</string>
+    <string name="fighter_mii_swordfighter">Mii-Schwertkämpfer</string>
+    <string name="fighter_mii_gunner">Mii-Schütze</string>
+    <string name="fighter_robin">Daraen</string>
+    <string name="fighter_villager">Bewohner</string>
+    <string name="fighter_isabelle">Melinda</string>
+    <string name="fighter_incineroar">Fuegro</string>
+    <string name="fighter_piranha_plant">Piranha-Pflanze</string>
+    <string name="fighter_hero">Held</string>
+    <string name="fighter_banjo_and_kazooie">Banjo und Kazooie</string>
+</resources>

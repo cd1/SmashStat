@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+
     <string name="welcome_text">Bem-vindo ao Smash Stat!</string>
+
+    <string name="add_new_match_title">Adicionar nova partida</string>
+    <string name="date_label">Data:</string>
+    <string name="select_date_dialog_title">Selecione a data da partida</string>
+    <string name="my_character_label">Meu personagem:</string>
+    <string name="their_character_label">Personagem do adversário:</string>
+    <string name="their_nickname_label">Apelido do adversário:</string>
+    <string name="elite_label">A partida é na Elite Smash?</string>
+    <string name="rematch_label">É revanche?</string>
+    <string name="winner_label">Quem venceu a partida?</string>
+    <string name="player_self_text">Eu</string>
+    <string name="player_the_other_text">O adversário</string>
+    <string name="given_damage_label">Dano dado (%):</string>
+    <string name="taken_damage_label">Dano recebido (%):</string>
+    <string name="new_gsp_label">Meu novo GSP:</string>
+    <string name="disconnect_label">Alguém desconectou durante a partida?</string>
+    <string name="self_death_label">Alguém se matou propositalmente?</string>
+    <string name="teabag_label">Alguém fez teabag?</string>
+    <string name="lag_label">A partida estava com lag?</string>
+    <string name="fun_label">A partida foi divertida?</string>
+    <string name="add_match_menu">Adicionar</string>
+    <string name="add_match_error">Houve um erro ao adicionar a partida [%1$s].</string>
 </resources>

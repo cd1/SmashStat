@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="vm" type="com.gmail.cristiandeives.smashstat.AddMatchViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/window_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:labelFor="@id/date_button"
+                android:text="@string/date_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/date_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="@{vm.date}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date_label"
+                tools:text="Jan 1st, 2020" />
+
+            <TextView
+                android:id="@+id/my_character_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/my_character_label"
+                android:labelFor="@id/my_character_spinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date_button" />
+
+            <Spinner
+                android:id="@+id/my_character_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_character_label"
+                bind:fighter="@={vm.myCharacter}" />
+
+            <TextView
+                android:id="@+id/their_character_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/their_character_label"
+                android:labelFor="@id/their_character_spinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/my_character_spinner" />
+
+            <Spinner
+                android:id="@+id/their_character_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/their_character_label"
+                bind:fighter="@={vm.theirCharacter}" />
+
+            <TextView
+                android:id="@+id/their_nickname_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/their_nickname_label"
+                android:labelFor="@id/their_nickname_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/their_character_spinner" />
+
+            <EditText
+                android:id="@+id/their_nickname_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:inputType="text"
+                android:importantForAutofill="no"
+                android:text="@={vm.theirNickname}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/their_nickname_label"
+                tools:text="john123" />
+
+            <TextView
+                android:id="@+id/elite_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/elite_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/their_nickname_text" />
+
+            <RadioGroup
+                android:id="@+id/elite_values"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:orientation="horizontal"
+                android:checkedButton="@={vm.elite}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/elite_label">
+
+                <RadioButton
+                    android:id="@+id/elite_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"
+                    tools:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/elite_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/intra_margin"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/rematch_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/rematch_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/elite_values" />
+
+            <RadioGroup
+                android:id="@+id/rematch_values"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:orientation="horizontal"
+                android:checkedButton="@={vm.rematch}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rematch_label">
+
+                <RadioButton
+                    android:id="@+id/rematch_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"
+                    tools:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rematch_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/intra_margin"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/winner_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/winner_label"
+                android:labelFor="@id/winner_values"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rematch_values" />
+
+            <RadioGroup
+                android:id="@+id/winner_values"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:orientation="horizontal"
+                android:checkedButton="@={vm.winner}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/winner_label">
+
+                <RadioButton
+                    android:id="@+id/winner_self"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/player_self_text"
+                    tools:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/winner_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/intra_margin"
+                    android:text="@string/player_the_other_text" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/given_damage_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/given_damage_label"
+                android:labelFor="@id/given_damage_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/winner_values" />
+
+            <EditText
+                android:id="@+id/given_damage_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:inputType="numberSigned"
+                android:importantForAutofill="no"
+                android:text="@={vm.givenDamageText}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/given_damage_label"
+                tools:text="300"/>
+
+            <TextView
+                android:id="@+id/taken_damage_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/taken_damage_label"
+                android:labelFor="@id/taken_damage_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/given_damage_text" />
+
+            <EditText
+                android:id="@+id/taken_damage_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:inputType="numberSigned"
+                android:importantForAutofill="no"
+                android:text="@={vm.takenDamageText}"
+                android:labelFor="@id/taken_damage_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/taken_damage_label"
+                tools:text="150" />
+
+            <TextView
+                android:id="@+id/new_gsp_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/new_gsp_label"
+                android:labelFor="@id/new_gsp_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/taken_damage_text" />
+
+            <EditText
+                android:id="@+id/new_gsp_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:inputType="numberSigned"
+                android:importantForAutofill="no"
+                android:text="@={vm.newGspText}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/new_gsp_label"
+                tools:text="8.000.000" />
+
+            <TextView
+                android:id="@+id/disconnected_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/disconnect_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_gsp_text" />
+
+            <RadioGroup
+                android:id="@+id/disconnected_values"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:orientation="horizontal"
+                android:checkedButton="@={vm.disconnected}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/disconnected_label">
+
+                <RadioButton
+                    android:id="@+id/disconnected_self"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/player_self_text"
+                    tools:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/disconnected_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/intra_margin"
+                    android:text="@string/player_the_other_text" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/self_death_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/self_death_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/disconnected_values" />
+
+            <RadioGroup
+                android:id="@+id/self_death_values"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:orientation="horizontal"
+                android:checkedButton="@={vm.selfDeath}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/self_death_label">
+
+                <RadioButton
+                    android:id="@+id/self_death_self"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/player_self_text"
+                    tools:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/self_death_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/intra_margin"
+                    android:text="@string/player_the_other_text" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/teabagging_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/teabag_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/self_death_values" />
+
+            <RadioGroup
+                android:id="@+id/teabagging_values"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:orientation="horizontal"
+                android:checkedButton="@={vm.teabagging}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teabagging_label">
+
+                <RadioButton
+                    android:id="@+id/teabagging_self"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/player_self_text"
+                    tools:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/teabagging_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/intra_margin"
+                    android:text="@string/player_the_other_text" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lag_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/lag_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teabagging_values" />
+
+            <RadioGroup
+                android:id="@+id/lag_values"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:orientation="horizontal"
+                android:checkedButton="@={vm.lag}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lag_label">
+
+                <RadioButton
+                    android:id="@+id/lag_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"
+                    tools:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/lag_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/intra_margin"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/fun_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginBottom="@dimen/window_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/fun_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lag_values" />
+
+            <RadioGroup
+                android:id="@+id/fun_values"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:orientation="horizontal"
+                android:checkedButton="@={vm.funMatch}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fun_label">
+
+                <RadioButton
+                    android:id="@+id/fun_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"
+                    tools:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/fun_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/intra_margin"
+                    android:text="@string/no" />
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

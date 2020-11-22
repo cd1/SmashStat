@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".AddMatchActivity"
+            android:label="@string/add_new_match_title"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

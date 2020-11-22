@@ -1,5 +1,31 @@
 <resources>
     <string name="app_name" translatable="false">Smash Stat</string>
 
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
     <string name="welcome_text">Welcome to Smash Stat!</string>
+
+    <string name="add_new_match_title">Add new match</string>
+    <string name="date_label">Date:</string>
+    <string name="select_date_dialog_title">Select the match date</string>
+    <string name="my_character_label">My character:</string>
+    <string name="fighter_name_with_id">%1$s – %2$s</string>
+    <string name="their_character_label">The opponent\'s character:</string>
+    <string name="their_nickname_label">The opponent\'s nickname:</string>
+    <string name="elite_label">Is the match Elite Smash?</string>
+    <string name="rematch_label">Is it a rematch?</string>
+    <string name="winner_label">Who won the match?</string>
+    <string name="player_self_text">I did</string>
+    <string name="player_the_other_text">The opponent did</string>
+    <string name="given_damage_label">Given damage (%):</string>
+    <string name="taken_damage_label">Taken damage (%):</string>
+    <string name="new_gsp_label">My new GSP:</string>
+    <string name="disconnect_label">Did someone disconnect during the match?</string>
+    <string name="self_death_label">Did someone commit self-death?</string>
+    <string name="teabag_label">Did someone teabag?</string>
+    <string name="lag_label">Was the match laggy?</string>
+    <string name="fun_label">Was the match fun?</string>
+    <string name="add_match_menu">Add</string>
+    <string name="add_match_error">There was an error adding the match [%1$s].</string>
 </resources>

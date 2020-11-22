@@ -1,0 +1,124 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "975af50216d3b1d4f2a9136b517893b7",
+    "entities": [
+      {
+        "tableName": "Match",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `date` INTEGER, `myCharacter` TEXT, `theirCharacter` TEXT, `theirNickname` TEXT NOT NULL, `isEliteSmash` INTEGER, `isRematch` INTEGER, `winner` TEXT, `givenDamage` INTEGER, `takenDamage` INTEGER, `newGsp` INTEGER, `disconnected` TEXT, `selfDeath` TEXT, `teabagging` TEXT, `lag` INTEGER, `funMatch` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "myCharacter",
+            "columnName": "myCharacter",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "theirCharacter",
+            "columnName": "theirCharacter",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "theirNickname",
+            "columnName": "theirNickname",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isEliteSmash",
+            "columnName": "isEliteSmash",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isRematch",
+            "columnName": "isRematch",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "winner",
+            "columnName": "winner",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "givenDamage",
+            "columnName": "givenDamage",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "takenDamage",
+            "columnName": "takenDamage",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "newGsp",
+            "columnName": "newGsp",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "disconnected",
+            "columnName": "disconnected",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "selfDeath",
+            "columnName": "selfDeath",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "teabagging",
+            "columnName": "teabagging",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lag",
+            "columnName": "lag",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "funMatch",
+            "columnName": "funMatch",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '975af50216d3b1d4f2a9136b517893b7')"
+    ]
+  }
+}

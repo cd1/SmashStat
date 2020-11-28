@@ -3,10 +3,12 @@ package com.gmail.cristiandeives.smashstat.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.time.LocalDate
+import java.time.LocalDateTime
 
 @Entity
 data class Match(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val createdAt: LocalDateTime = LocalDateTime.now(),
     val date: LocalDate?,
     val myCharacter: Fighter?,
     val theirCharacter: Fighter?,

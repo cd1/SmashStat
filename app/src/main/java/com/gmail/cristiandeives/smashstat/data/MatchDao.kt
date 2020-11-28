@@ -10,6 +10,6 @@ interface MatchDao {
     @Insert
     suspend fun create(match: Match)
 
-    @Query("SELECT * FROM `Match` ORDER BY date DESC")
+    @Query("SELECT * FROM `Match` ORDER BY date DESC, createdAt DESC")
     fun readAll(): LiveData<List<Match>>
 }

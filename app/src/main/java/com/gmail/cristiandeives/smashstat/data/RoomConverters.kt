@@ -3,6 +3,7 @@ package com.gmail.cristiandeives.smashstat.data
 import androidx.room.TypeConverter
 import java.time.Instant
 import java.time.LocalDate
+import java.time.LocalDateTime
 import java.time.ZoneOffset
 
 object RoomConverters {
@@ -10,17 +11,26 @@ object RoomConverters {
 
     @JvmStatic
     @TypeConverter
-    fun fromLocalDate(date: LocalDate) = date
-        .atStartOfDay()
+    fun fromLocalDate(date: LocalDate) =
+        fromLocalDateTime(date.atStartOfDay())
+
+    @JvmStatic
+    @TypeConverter
+    fun toLocalDate(dateMillis: Long): LocalDate =
+        toLocalDateTime(dateMillis).toLocalDate()
+
+    @JvmStatic
+    @TypeConverter
+    fun fromLocalDateTime(dateTime: LocalDateTime) = dateTime
         .atZone(ZoneOffset.UTC)
         .toInstant()
         .toEpochMilli()
 
     @JvmStatic
     @TypeConverter
-    fun toLocalDate(dateMillis: Long): LocalDate = Instant.ofEpochMilli(dateMillis)
+    fun toLocalDateTime(dateTimeMillis: Long): LocalDateTime = Instant.ofEpochMilli(dateTimeMillis)
         .atZone(ZoneOffset.UTC)
-        .toLocalDate()
+        .toLocalDateTime()
 
     @JvmStatic
     @TypeConverter

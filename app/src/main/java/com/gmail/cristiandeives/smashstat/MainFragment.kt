@@ -42,7 +42,9 @@ class MainFragment : Fragment() {
             val actualMatches = (matches ?: emptyList())
             val hasData = actualMatches.isNotEmpty()
 
-            matchAdapter.submitList(actualMatches)
+            matchAdapter.submitList(actualMatches) {
+                binding.matchesRecycler.scrollToPosition(0)
+            }
 
             binding.apply {
                 welcomeTextGroup.isVisible = !hasData

@@ -12,7 +12,7 @@
 
         <item name="colorSecondary">@color/green</item>
         <item name="colorSecondaryVariant">@color/dark_green</item>
-        <item name="colorOnSecondary">@color/dark_gray</item>
+        <item name="colorOnSecondary">@color/light_gray</item>
     </style>
 
     <style name="Widget.SmashStat.WelcomeText" parent="Widget.MaterialComponents.TextView">

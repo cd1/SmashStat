@@ -30,7 +30,7 @@ class AddMatchFragment : Fragment(),
     private lateinit var binding: FragmentAddMatchBinding
     private val viewModel by viewModels<AddMatchViewModel>()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         Log.v(TAG, "> onCreateView(...)")
 
         binding = FragmentAddMatchBinding.inflate(inflater, container, false).apply {

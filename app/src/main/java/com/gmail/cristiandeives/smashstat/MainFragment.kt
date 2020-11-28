@@ -11,7 +11,7 @@ import com.gmail.cristiandeives.smashstat.databinding.FragmentMainBinding
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         Log.v(TAG, "> onCreateView(...)")
 
         binding = FragmentMainBinding.inflate(inflater, container, false)

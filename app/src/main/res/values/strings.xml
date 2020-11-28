@@ -5,6 +5,14 @@
     <string name="no">No</string>
 
     <string name="welcome_text">Welcome to Smash Stat!</string>
+    <string name="welcome_sub_text">Tap the + button below to start adding a new match</string>
+
+    <string name="my_character_generic">[My character]</string>
+    <string name="their_character_generic">[Their character]</string>
+    <string name="unknown_damage">[?]%</string>
+    <string name="match_characters_text">%1$s × %2$s</string>
+    <string name="match_damage_simple_text">%1$s × %2$s</string>
+    <string name="match_damage_complete_text">%1$s × %2$s (damage ratio = %3$s)</string>
 
     <string name="add_new_match_title">Add new match</string>
     <string name="date_label">Date:</string>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TODO: I wish I could change just the textAppearance in this style... -->
+    <style name="Widget.SmashStat.WelcomeText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline2</item>
+    </style>
+</resources>

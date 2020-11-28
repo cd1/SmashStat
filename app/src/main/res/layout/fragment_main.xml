@@ -1,22 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <TextView
-            android:id="@+id/welcome_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/window_margin"
-            android:paddingBottom="@dimen/window_margin"
-            android:paddingStart="@dimen/window_margin"
-            android:paddingEnd="@dimen/window_margin"
-            android:text="@string/welcome_text"
-            style="@style/Widget.SmashStat.WelcomeText"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/window_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/welcome_text"
+                style="@style/Widget.SmashStat.WelcomeText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/welcome_sub_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/welcome_sub_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intra_margin"
+                android:layout_marginBottom="@dimen/window_margin"
+                android:layout_marginStart="@dimen/window_margin"
+                android:layout_marginEnd="@dimen/window_margin"
+                android:text="@string/welcome_sub_text"
+                style="@style/Widget.SmashStat.WelcomeSubText"
+                app:layout_constraintTop_toBottomOf="@+id/welcome_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/welcome_text_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="welcome_text,welcome_sub_text" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/matches_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>

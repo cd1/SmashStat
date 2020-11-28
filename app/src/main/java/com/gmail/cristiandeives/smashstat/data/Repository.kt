@@ -10,6 +10,8 @@ class Repository private constructor(context: Context) {
         db.matchDao().create(match)
     }
 
+    fun readAllMatches() = db.matchDao().readAll()
+
     companion object {
         private const val DATABASE_NAME = "smashstat"
 

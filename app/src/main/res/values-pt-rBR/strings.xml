@@ -4,6 +4,14 @@
     <string name="no">Não</string>
 
     <string name="welcome_text">Bem-vindo ao Smash Stat!</string>
+    <string name="welcome_sub_text">Toque no botão + abaixo pra começar a adicionar uma nova partida</string>
+
+    <string name="my_character_generic">[Meu personagem]</string>
+    <string name="their_character_generic">[Personagem do adversário]</string>
+    <string name="unknown_damage">[?]%</string>
+    <string name="match_characters_text">%1$s × %2$s</string>
+    <string name="match_damage_simple_text">%1$s × %2$s</string>
+    <string name="match_damage_complete_text">%1$s × %2$s (proporção de dano = %3$s)</string>
 
     <string name="add_new_match_title">Adicionar nova partida</string>
     <string name="date_label">Data:</string>

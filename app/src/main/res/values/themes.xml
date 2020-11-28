@@ -6,17 +6,33 @@
     </style>
 
     <style name="Theme.SmashStat" parent="Theme.Base.SmashStat">
-        <item name="colorPrimary">@color/pink</item>
-        <item name="colorPrimaryVariant">@color/dark_pink</item>
-        <item name="colorOnPrimary">@color/light_gray</item>
+        <item name="colorPrimary">@color/pink_600</item>
+        <item name="colorPrimaryVariant">@color/pink_600_dark</item>
+        <item name="colorOnPrimary">@color/gray_100</item>
 
-        <item name="colorSecondary">@color/green</item>
-        <item name="colorSecondaryVariant">@color/dark_green</item>
-        <item name="colorOnSecondary">@color/light_gray</item>
+        <item name="colorSecondary">@color/green_600</item>
+        <item name="colorSecondaryVariant">@color/green_600_dark</item>
+        <item name="colorOnSecondary">@color/gray_100</item>
+
+        <item name="colorVictory">@color/green_300</item>
+        <item name="colorDefeat">@color/red_300</item>
     </style>
 
     <style name="Widget.SmashStat.WelcomeText" parent="Widget.MaterialComponents.TextView">
         <item name="android:textAlignment">center</item>
-        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline2</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline3</item>
+    </style>
+
+    <style name="Widget.SmashStat.WelcomeSubText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1</item>
+    </style>
+
+    <style name="TextAppearance.SmashStat.MatchListText" parent="@style/TextAppearance.MaterialComponents.Body1">
+        <!-- no custom changes for now, other than settings a base style -->
+    </style>
+
+    <style name="TextAppearance.SmashStat.MatchListSubText" parent="@style/TextAppearance.MaterialComponents.Caption">
+        <!-- no custom changes for now, other than settings a base style -->
     </style>
 </resources>

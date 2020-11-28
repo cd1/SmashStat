@@ -41,7 +41,7 @@ object RoomConverters {
     @TypeConverter
     fun toFighter(composedId: String): Fighter? {
         val isEpsilon = composedId.endsWith(EPSILON_SYMBOL)
-        val lastIdIndex = if (isEpsilon) composedId.length else composedId.length - 1
+        val lastIdIndex = if (isEpsilon) composedId.length - 1 else composedId.length
         val id = composedId.substring(0, lastIdIndex).toIntOrNull()
 
         return Fighter.ALL_VALUES.find { f ->
@@ -55,5 +55,5 @@ object RoomConverters {
 
     @JvmStatic
     @TypeConverter
-    fun toPlayer(name: String?) = (name?.let { Match.Player.valueOf(it) } ?: Match.Player.SELF)
+    fun toPlayer(name: String?) = name?.let { Match.Player.valueOf(it) }
 }

@@ -12,7 +12,7 @@
     <string name="their_character_label">Der Kämpfer des Gegners:</string>
     <string name="their_nickname_label">Der Spitzname des Gegners:</string>
     <string name="elite_label">Ist der Kampf im Elite-Smash?</string>
-    <string name="rematch_label">Ist der Kampf ein Rückkampf?</string>
+    <string name="rematch_label">Ist der Kampf eine Revanche?</string>
     <string name="winner_label">Wer hat den Kampf gesiegt?</string>
     <string name="player_self_text">Ich habe</string>
     <string name="player_the_other_text">Der Gegner hat</string>
@@ -20,7 +20,7 @@
     <string name="taken_damage_label">Erlittener Schaden (%):</string>
     <string name="new_gsp_label">Meine neue Smash-Fertigkeit:</string>
     <string name="disconnect_label">Hat jemand während des Kampfs die Verbindung getrennt?</string>
-    <string name="self_death_label">Hat jemand sich umgebracht?</string>
+    <string name="self_death_label">Hat jemand sich selbst zerstört?</string>
     <string name="teabag_label">Hat jemand Tea-Bagging betrieben?</string>
     <string name="lag_label">Hatte der Kampf Lag?</string>
     <string name="fun_label">Hat der Kampf Spaß gemacht?</string>

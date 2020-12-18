@@ -87,6 +87,7 @@ data class Fighter(val id: Int, @StringRes val nameRes: Int, val isEpsilon: Bool
         val BYLETH = Fighter(75, R.string.fighter_byleth)
         val MIN_MIN = Fighter(76, R.string.fighter_min_min)
         val STEVE = Fighter(77, R.string.fighter_steve)
+        val SEPHIROTH = Fighter(78, R.string.fighter_sephiroth)
 
         val ALL_VALUES = listOf(
             MARIO,
@@ -171,6 +172,7 @@ data class Fighter(val id: Int, @StringRes val nameRes: Int, val isEpsilon: Bool
             BYLETH,
             MIN_MIN,
             STEVE,
+            SEPHIROTH,
         )
     }
 }

@@ -54,7 +54,7 @@ object RoomConverters {
         val lastIdIndex = if (isEpsilon) composedId.length - 1 else composedId.length
         val id = composedId.substring(0, lastIdIndex).toIntOrNull()
 
-        return Fighter.ALL_VALUES.find { f ->
+        return Fighter.values().find { f ->
             f.id == id && f.isEpsilon == isEpsilon
         }
     }

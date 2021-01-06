@@ -53,10 +53,10 @@ class AddMatchFragment : Fragment(),
         binding.apply {
             dateButton.setOnClickListener(this@AddMatchFragment)
             myCharacterSpinner.adapter = FighterSpinnerAdapter(ctx).apply {
-                data = Fighter.ALL_VALUES
+                data = Fighter.values().toList()
             }
             theirCharacterSpinner.adapter = FighterSpinnerAdapter(ctx).apply {
-                data = Fighter.ALL_VALUES
+                data = Fighter.values().toList()
             }
             eliteLabel.setOnClickListener(this@AddMatchFragment)
             rematchLabel.setOnClickListener(this@AddMatchFragment)

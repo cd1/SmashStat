@@ -33,5 +33,5 @@
     <string name="lag_label">A partida estava com lag?</string>
     <string name="fun_label">A partida foi divertida?</string>
     <string name="add_match_menu">Adicionar</string>
-    <string name="add_match_error">Houve um erro ao adicionar a partida [%1$s].</string>
+    <string name="add_match_error">Houve um erro ao salvar a partida [%1$s].</string>
 </resources>

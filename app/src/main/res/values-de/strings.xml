@@ -7,7 +7,7 @@
     <string name="welcome_sub_text">Tap the + button below to start adding a new match</string>
 
     <string name="my_character_generic">[Mein Kämpfer]</string>
-    <string name="their_character_generic">[Der Kämpfer des Gegners]</string>
+    <string name="their_character_generic">[Kämpfer des Gegners]</string>
     <string name="unknown_damage">[?] %</string>
     <string name="match_characters_text">%1$s × %2$s</string>
     <string name="match_damage_simple_text">%1$s × %2$s</string>
@@ -17,8 +17,8 @@
     <string name="date_label">Datum:</string>
     <string name="select_date_dialog_title">Wähle das Kampfdatum aus</string>
     <string name="my_character_label">Mein Kämpfer:</string>
-    <string name="their_character_label">Der Kämpfer des Gegners:</string>
-    <string name="their_nickname_label">Der Spitzname des Gegners:</string>
+    <string name="their_character_label">Kämpfer des Gegners:</string>
+    <string name="their_nickname_label">Spitzname des Gegners:</string>
     <string name="elite_label">Ist der Kampf im Elite-Smash?</string>
     <string name="rematch_label">Ist der Kampf eine Revanche?</string>
     <string name="winner_label">Wer hat den Kampf gesiegt?</string>
@@ -33,5 +33,5 @@
     <string name="lag_label">Hatte der Kampf Lag?</string>
     <string name="fun_label">Hat der Kampf Spaß gemacht?</string>
     <string name="add_match_menu">Hinzufügen</string>
-    <string name="add_match_error">Es gab einen Fehler beim hinzufügen des Kampfs [%1$s].</string>
+    <string name="add_match_error">Beim Speichern des Kampfs ist ein Fehler aufgetreten [%1$s].</string>
 </resources>

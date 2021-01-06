@@ -35,5 +35,5 @@
     <string name="lag_label">Was the match laggy?</string>
     <string name="fun_label">Was the match fun?</string>
     <string name="add_match_menu">Add</string>
-    <string name="add_match_error">There was an error adding the match [%1$s].</string>
+    <string name="add_match_error">There was an error saving the match [%1$s].</string>
 </resources>

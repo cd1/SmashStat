@@ -12,8 +12,8 @@ android {
         applicationId "com.gmail.cristiandeives.smashstat"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 3
-        versionName "0.2.1"
+        versionCode 4
+        versionName "0.3"
 
         javaCompileOptions {
             annotationProcessorOptions {

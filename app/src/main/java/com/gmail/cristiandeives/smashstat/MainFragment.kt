@@ -39,7 +39,7 @@ class MainFragment : Fragment() {
         viewModel.matches.observe(viewLifecycleOwner) { matches: List<Match>? ->
             Log.v(TAG, "> matches#observe(matches=#${matches?.size})")
 
-            val actualMatches = (matches ?: emptyList())
+            val actualMatches = matches.orEmpty()
             val hasData = actualMatches.isNotEmpty()
 
             matchAdapter.submitList(actualMatches) {

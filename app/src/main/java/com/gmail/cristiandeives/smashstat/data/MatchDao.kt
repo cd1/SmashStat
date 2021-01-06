@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface MatchDao {
@@ -12,4 +13,10 @@ interface MatchDao {
 
     @Query("SELECT * FROM `Match` ORDER BY date DESC, createdAt DESC")
     fun readAll(): LiveData<List<Match>>
+
+    @Query("SELECT * FROM `Match` WHERE ID = :id")
+    suspend fun read(id: Int): Match?
+
+    @Update
+    suspend fun update(match: Match)
 }

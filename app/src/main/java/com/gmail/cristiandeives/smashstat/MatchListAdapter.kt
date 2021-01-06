@@ -65,6 +65,11 @@ class MatchListAdapter : ListAdapter<Match, MatchViewHolder>(DiffUtilItemCallbac
             context.getString(R.string.match_damage_complete_text, givenDamageStr, takenDamageStr, ratio)
         }
         holder.subText = subText
+
+        holder.itemView.setOnClickListener {
+            val intent = EditMatchActivity.createIntent(context, match.id)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemViewType(position: Int) = (getItem(position).winner?.ordinal ?: -1)

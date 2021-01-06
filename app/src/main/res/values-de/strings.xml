@@ -33,5 +33,9 @@
     <string name="lag_label">Hatte der Kampf Lag?</string>
     <string name="fun_label">Hat der Kampf Spaß gemacht?</string>
     <string name="add_match_menu">Hinzufügen</string>
-    <string name="add_match_error">Beim Speichern des Kampfs ist ein Fehler aufgetreten [%1$s].</string>
+    <string name="save_match_error">Beim Speichern des Kampfs ist ein Fehler aufgetreten [%1$s].</string>
+
+    <string name="edit_match_title">Kampf bearbeiten</string>
+    <string name="edit_match_menu">Bearbeiten</string>
+    <string name="read_match_error">Beim Abrufen der Kampf Informationen ist ein Fehler aufgetreten [%1$s].</string>
 </resources>

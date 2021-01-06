@@ -15,6 +15,12 @@ class Repository private constructor(context: Context) {
 
     fun readAllMatches() = db.matchDao().readAll()
 
+    suspend fun readMatch(id: Int) = db.matchDao().read(id)
+
+    suspend fun updateMatch(match: Match) {
+        db.matchDao().update(match)
+    }
+
     companion object {
         private const val DATABASE_NAME = "smashstat"
 

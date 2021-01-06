@@ -21,6 +21,11 @@
             android:name=".AddMatchActivity"
             android:label="@string/add_new_match_title"
             android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".EditMatchActivity"
+            android:label="@string/edit_match_title"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

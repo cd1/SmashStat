@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" xmlns:bind="http://schemas.android.com/apk/res-auto">
     <data>
-        <variable name="vm" type="com.gmail.cristiandeives.smashstat.AddMatchViewModel" />
+        <variable name="vm" type="com.gmail.cristiandeives.smashstat.SaveMatchViewModel" />
     </data>
 
     <ScrollView
@@ -136,7 +136,7 @@
                 android:layout_marginStart="@dimen/window_margin"
                 android:layout_marginEnd="@dimen/window_margin"
                 android:orientation="horizontal"
-                android:checkedButton="@={vm.elite}"
+                android:checkedButton="@={vm.eliteCheckedButton}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/elite_label">
 
@@ -173,7 +173,7 @@
                 android:layout_marginStart="@dimen/window_margin"
                 android:layout_marginEnd="@dimen/window_margin"
                 android:orientation="horizontal"
-                android:checkedButton="@={vm.rematch}"
+                android:checkedButton="@={vm.rematchCheckedButton}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rematch_label">
 
@@ -211,7 +211,7 @@
                 android:layout_marginStart="@dimen/window_margin"
                 android:layout_marginEnd="@dimen/window_margin"
                 android:orientation="horizontal"
-                android:checkedButton="@={vm.winner}"
+                android:checkedButton="@={vm.winnerCheckedButton}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/winner_label">
 
@@ -324,7 +324,7 @@
                 android:layout_marginStart="@dimen/window_margin"
                 android:layout_marginEnd="@dimen/window_margin"
                 android:orientation="horizontal"
-                android:checkedButton="@={vm.disconnected}"
+                android:checkedButton="@={vm.disconnectedCheckedButton}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/disconnected_label">
 
@@ -361,7 +361,7 @@
                 android:layout_marginStart="@dimen/window_margin"
                 android:layout_marginEnd="@dimen/window_margin"
                 android:orientation="horizontal"
-                android:checkedButton="@={vm.selfDeath}"
+                android:checkedButton="@={vm.selfDeathCheckedButton}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/self_death_label">
 
@@ -398,7 +398,7 @@
                 android:layout_marginStart="@dimen/window_margin"
                 android:layout_marginEnd="@dimen/window_margin"
                 android:orientation="horizontal"
-                android:checkedButton="@={vm.teabagging}"
+                android:checkedButton="@={vm.teabaggingCheckedButton}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/teabagging_label">
 
@@ -435,7 +435,7 @@
                 android:layout_marginStart="@dimen/window_margin"
                 android:layout_marginEnd="@dimen/window_margin"
                 android:orientation="horizontal"
-                android:checkedButton="@={vm.lag}"
+                android:checkedButton="@={vm.lagCheckedButton}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/lag_label">
 
@@ -473,7 +473,7 @@
                 android:layout_marginStart="@dimen/window_margin"
                 android:layout_marginEnd="@dimen/window_margin"
                 android:orientation="horizontal"
-                android:checkedButton="@={vm.funMatch}"
+                android:checkedButton="@={vm.funCheckedButton}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/fun_label">
 

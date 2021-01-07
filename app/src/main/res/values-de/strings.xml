@@ -38,4 +38,7 @@
     <string name="edit_match_title">Kampf bearbeiten</string>
     <string name="edit_match_menu">Bearbeiten</string>
     <string name="read_match_error">Beim Abrufen der Kampf Informationen ist ein Fehler aufgetreten [%1$s].</string>
+
+    <string name="delete_match_menu">Löschen</string>
+    <string name="delete_match_error">Beim Löschen des Kampfs ist ein Fehler aufgetreten [%1$s].</string>
 </resources>

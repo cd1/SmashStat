@@ -12,6 +12,9 @@ class EditMatchViewModel(app: Application, private val matchId: Int) : SaveMatch
     private val _readMatchState = MutableLiveData<Resource<*>>()
     val readMatchState: LiveData<Resource<*>> = _readMatchState
 
+    private val _deleteMatchState = MutableLiveData<Resource<*>>()
+    val deleteMatchState: LiveData<Resource<*>> = _deleteMatchState
+
     init {
         readExistingMatch()
     }
@@ -67,6 +70,23 @@ class EditMatchViewModel(app: Application, private val matchId: Int) : SaveMatch
             } catch (ex: Exception) {
                 Log.e(TAG, "failed to edit match [${ex.message}", ex)
                 _saveMatchState.value = Resource.Error<Unit>(ex)
+            }
+        }
+    }
+
+    fun deleteMatch() {
+        viewModelScope.launch {
+            try {
+                Log.d(TAG, "deleting match with ID=$matchId...")
+                _deleteMatchState.value = Resource.Loading<Unit>()
+
+                repo.deleteMatch(matchId)
+
+                Log.d(TAG, "match deleted successfully")
+                _deleteMatchState.value = Resource.Success<Unit>()
+            } catch (ex: Exception) {
+                Log.e(TAG, "failed to delete match [${ex.message}]", ex)
+                _deleteMatchState.value = Resource.Error<Unit>(ex)
             }
         }
     }

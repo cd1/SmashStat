@@ -21,6 +21,10 @@ class Repository private constructor(context: Context) {
         db.matchDao().update(match)
     }
 
+    suspend fun deleteMatch(id: Int) {
+        db.matchDao().delete(id)
+    }
+
     companion object {
         private const val DATABASE_NAME = "smashstat"
 

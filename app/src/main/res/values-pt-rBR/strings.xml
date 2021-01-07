@@ -38,4 +38,7 @@
     <string name="edit_match_title">Alterar partida</string>
     <string name="edit_match_menu">Alterar</string>
     <string name="read_match_error">Houve um erro ao recuperar as informações da partida [%1$s].</string>
+
+    <string name="delete_match_menu">Remover</string>
+    <string name="delete_match_error">Houve um erro ao remover a partida [%1$s].</string>
 </resources>

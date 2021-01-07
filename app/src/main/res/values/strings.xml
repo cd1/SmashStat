@@ -40,4 +40,7 @@
     <string name="edit_match_title">Edit match</string>
     <string name="edit_match_menu">Edit</string>
     <string name="read_match_error">There was an error retrieving the match information [%1$s].</string>
+
+    <string name="delete_match_menu">Delete</string>
+    <string name="delete_match_error">There was an error deleting the match [%1$s].</string>
 </resources>

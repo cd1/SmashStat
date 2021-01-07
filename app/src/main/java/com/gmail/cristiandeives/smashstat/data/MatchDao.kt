@@ -19,4 +19,7 @@ interface MatchDao {
 
     @Update
     suspend fun update(match: Match)
+
+    @Query("DELETE FROM `Match` WHERE id = :id")
+    suspend fun delete(id: Int)
 }
